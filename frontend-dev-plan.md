@@ -2,7 +2,7 @@ Here's a **clean, organized reference for your frontend developer**, detailing t
 
 ---
 
-### 🧭 **Navigation Bar (Navbar Sections)**
+### 🧭 **Navigation Bar (Side Navbar Sections)**
 
 1. **Dashboard**
 2. **Containers**
