@@ -1,6 +1,6 @@
-# dockscope
-dockscope
+# DockScope Project
 
+## 📄 Documentation
 
-[Endpoint-URL](./https://github.com/GovindSingh9447/dockscope/blob/main/DockScope-endpoint-url.md)
-[Frontend-dev-plan](./)
+- [📌 DockScope Endpoint URLs](./DockScope-endpoint-url.md)
+- [🛠️ Frontend Development Plan](./frontend-dev-plan.md)
