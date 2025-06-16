@@ -1,4 +1,4 @@
-Great! Here's a **clean, organized reference for your frontend developer**, detailing the required **frontend pages/sections**, **navigation**, and **API endpoints** to integrate. This will help them build a clean and structured UI for DockScope.
+Here's a **clean, organized reference for your frontend developer**, detailing the required **frontend pages/sections**, **navigation**, and **API endpoints** to integrate. This will help them build a clean and structured UI for DockScope.
 
 ---
 
