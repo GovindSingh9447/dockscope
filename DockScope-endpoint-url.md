@@ -2,7 +2,7 @@ Below is the **full developer-ready frontend integration guide**, including:
 
 * Page-level frontend breakdown
 * Feature list
-* **Exact full API endpoint URLs** with example `curl` requests for both local (`localhost`) and public server (`13.204.80.213`)
+* **Exact full API endpoint URLs** with example `curl` requests for both local (`localhost`) and public server (`13.204.76.210`)
 
 ---
 
@@ -11,7 +11,7 @@ Below is the **full developer-ready frontend integration guide**, including:
 | Environment | URL                         |
 | ----------- | --------------------------- |
 | Local       | `http://localhost:9447`     |
-| Public      | `http://13.204.80.213:9447` |
+| Public      | `http://13.204.76.210:9447` |
 
 ---
 
@@ -40,11 +40,11 @@ Below is the **full developer-ready frontend integration guide**, including:
 ```bash
 # Get container list
 curl http://localhost:9447/containers
-curl http://13.204.80.213:9447/containers
+curl http://13.204.76.210:9447/containers
 
 # Health check
 curl http://localhost:9447/health
-curl http://13.204.80.213:9447/health
+curl http://13.204.76.210:9447/health
 ```
 
 ---
@@ -60,7 +60,7 @@ curl http://13.204.80.213:9447/health
 
 ```bash
 curl -X GET http://localhost:9447/containers
-curl -X GET http://13.204.80.213:9447/containers
+curl -X GET http://13.204.76.210:9447/containers
 ```
 
 ---
@@ -101,7 +101,7 @@ curl -v "http://localhost:9447/logs?id=<container_id>&search=nginx&page=1&limit=
 
 # Live streaming logs via WebSocket
 wscat -c "ws://localhost:9447/wslogs?id=<container_id>"
-wscat -c "ws://13.204.80.213:9447/wslogs?id=<container_id>"
+wscat -c "ws://13.204.76.210:9447/wslogs?id=<container_id>"
 
 # Export logs
 curl -v -o logs.csv "http://localhost:9447/export/logs?id=<container_id>&search=nginx"
@@ -122,7 +122,7 @@ curl -O -J "http://localhost:9447/export/logs?id=<container_id>"
 ```bash
 # Metrics for container
 curl "http://localhost:9447/metrics?id=<container_id>"
-curl "http://13.204.80.213:9447/metrics?id=<container_id>"
+curl "http://13.204.76.210:9447/metrics?id=<container_id>"
 
 # With JSON pretty print
 curl -s "http://localhost:9447/metrics?id=<container_id>" | jq
@@ -143,7 +143,7 @@ curl -s "http://localhost:9447/metrics?id=<container_id>" | jq
 **📌 Create CPU Alert**
 
 ```bash
-curl -X POST http://localhost:9447/alerts \
+curl -X POST http://13.204.76.210:9447/alerts \
   -H "Content-Type: application/json" \
   -d '{
     "id": "cpu-alert-1",
@@ -193,7 +193,7 @@ docker exec -it stress-container bash -c "echo 'panic: something bad happened' >
 ```bash
 # Export all containers
 curl -O -J http://localhost:9447/export/containers
-curl -O -J http://13.204.80.213:9447/export/containers
+curl -O -J http://13.204.76.210:9447/export/containers
 
 # Export logs with filter
 curl -O -J "http://localhost:9447/export/logs?id=05273fb87b5f"
@@ -212,7 +212,7 @@ curl -v -o logs.csv "http://localhost:9447/export/logs?id=<container_id>&search=
 
 ```bash
 curl http://localhost:9447/health
-curl http://13.204.80.213:9447/health
+curl http://13.204.76.210:9447/health
 ```
 
 ---
